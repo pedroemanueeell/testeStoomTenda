@@ -4,11 +4,11 @@ import CreateCartPage from "../../support/pages/CreateCartPage"
 
 describe('Criar carrinho', () => {
     beforeEach(() => { 
-        AccessEnvironmentPage.enlargeScreen()
-    });
-    it('Cenario 1: Adicionar produto seller e tenda ao carrinho', () => {
         AccessEnvironmentPage.accessEnvironment('confeitaria-')
-        CreateCartPage.clickButtonTermAccept()
+        AccessEnvironmentPage.enlargeScreen()
+        AccessEnvironmentPage.clickButtonTermAccept()
+    });
+    it('Cenario 1: Adicionar produto seller e tenda ao carrinho', () => {        
         CreateCartPage.inputCep('11702200')
         CreateCartPage.clickButtonClickRemove(0)
         CreateCartPage.clickAdrres()
@@ -24,8 +24,6 @@ describe('Criar carrinho', () => {
     });
 
     it('Cenario 2: Adicionar mais uma unidade ao carrinho', () => {
-        AccessEnvironmentPage.accessEnvironment('confeitaria-')
-        CreateCartPage.clickButtonTermAccept()
         CreateCartPage.inputCep('11702200')
         CreateCartPage.clickButtonClickRemove(0)
         CreateCartPage.clickAdrres()
@@ -42,8 +40,6 @@ describe('Criar carrinho', () => {
     });
 
     it('Cenario 3: Remover uma unidade do carrinho', () => {
-        AccessEnvironmentPage.accessEnvironment('confeitaria-')
-        CreateCartPage.clickButtonTermAccept()
         CreateCartPage.inputCep('11702200')
         CreateCartPage.clickButtonClickRemove(0)
         CreateCartPage.clickAdrres()
